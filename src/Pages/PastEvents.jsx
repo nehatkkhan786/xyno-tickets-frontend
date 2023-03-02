@@ -20,20 +20,19 @@ const data = [
 
 const PastEvents = () => {
   return (
-   <Box sx={{mt:2}}>
-    <Container sx={{display:'flex', justifyContent:'center', flexDirection:'column', alignItems:'center', width:'100%', height:'100%',}}>
-        <Typography sx={{textAlign:'center', textTransform:'uppercase', fontSize:24}}>Past Events</Typography>
-        <Grid container spacing={2}sx={{mt:4}}>
-           {data.map((event)=>{
+    <Container maxWidth='md' >
+      <Grid container spacing={1}>
+          {data.map((event)=>{
             return (
-                <Grid item md={4} xs={12} sm={12} lg={4}>
-                    <EventsCard event={event}/>
-                </Grid>
+              <>
+              <Grid item key={event.id} xs={6} sm={6} md={3}>
+                  <EventsCard event={event}/>
+              </Grid>
+              </>
             )
-           })}
-        </Grid>
+          })}
+      </Grid>
     </Container>
-   </Box>
   )
 }
 

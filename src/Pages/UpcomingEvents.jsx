@@ -1,9 +1,10 @@
+import { Typography } from '@mui/material'
 import React from 'react'
-import Homepage from './Homepage'
+
 
 const UpcomingEvents = () => {
   return (
-   <Homepage/>
+    <Typography>Upcoming Events</Typography>
   )
 }
 
